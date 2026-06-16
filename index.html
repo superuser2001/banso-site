@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BANSO 伴奏｜あなたの起業に、伴奏を。（業種を問わず）</title>
+<meta name="description" content="音楽の商社が運営する、起業の伴奏サービス。主役はあなた。構想からサイト制作、集客・送客、事業の売却まで、ずっと隣で伴奏します。最初のご相談は無料です。">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BANSO 伴奏">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="BANSO 伴奏｜あなたの起業に、伴奏を。">
+<meta property="og:description" content="音楽の商社が運営する、起業の伴奏サービス。構想から集客・送客、M&Aまで、主役のあなたに同じチームで。最初のご相談は無料です。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BANSO 伴奏｜あなたの起業に、伴奏を。">
+<meta name="twitter:description" content="音楽の商社が運営する、起業の伴奏サービス。最初のご相談は無料です。">
+<meta name="twitter:image" content="https://example.com/og-image.png">
+<meta name="theme-color" content="#161020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161020'/%3E%3Crect x='8' y='14' width='3' height='10' rx='1.5' fill='%23E3A53C'/%3E%3Crect x='14.5' y='9' width='3' height='15' rx='1.5' fill='%237B61E0'/%3E%3Crect x='21' y='17' width='3' height='7' rx='1.5' fill='%23E3A53C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161020;
+    --ink-2:#221A33;
+    --ink-3:#2D2342;
+    --paper:#F4EFE6;
+    --surface:#FFFDF8;
+    --gold:#E3A53C;
+    --gold-deep:#C2851F;
+    --violet:#7B61E0;
+    --violet-2:#9580EE;
+    --violet-deep:#5B43C4;
+    --slate:#5E5670;
+    --slate-2:#897F99;
+    --line:rgba(22,16,32,.12);
+    --line-dark:rgba(255,255,255,.13);
+    --shadow-md:0 12px 44px rgba(22,16,32,.14);
+    --font-display:"Schibsted Grotesk","Noto Sans JP",system-ui,sans-serif;
+    --font-body:"Noto Sans JP","Schibsted Grotesk",system-ui,sans-serif;
+    --font-serif:"Noto Serif JP",serif;
+    --wrap:1120px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--font-body);line-height:1.9;letter-spacing:.02em;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:rgba(227,165,60,.3)}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px;width:100%}
+  .section{padding:clamp(64px,9vw,124px) 0;position:relative}
+  .s-dark{background:var(--ink);color:#EBE7F2}
+  .s-dark .lead,.s-dark p{color:#BDB6CC}
+  .s-paper{background:var(--paper)}
+  .s-surface{background:var(--surface)}
+  section[id]{scroll-margin-top:84px}
+
+  /* ---------- type ---------- */
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 22px}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(227,165,60,.18)}
+  .eyebrow.violet{color:var(--violet-deep)}
+  .eyebrow.violet::before{background:var(--violet);box-shadow:0 0 0 4px rgba(123,97,224,.2)}
+
+  h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.18;letter-spacing:-.01em;margin:0}
+  h2{font-size:clamp(1.85rem,3.6vw,2.9rem)}
+  .lead{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--slate);max-width:62ch;margin:18px 0 0;line-height:1.95}
+
+  /* ---------- nav ---------- */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.78);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+  .nav.scrolled{border-bottom-color:var(--line);background:rgba(244,239,230,.93)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-weight:800;font-size:1.32rem;letter-spacing:.02em}
+  .mark{display:inline-flex;align-items:flex-end;gap:2.5px;height:19px}
+  .mark i{width:3px;border-radius:2px;background:var(--gold);transform-origin:bottom;animation:eq 1.2s ease-in-out infinite}
+  .mark i:nth-child(1){height:8px;animation-delay:-.15s}
+  .mark i:nth-child(2){height:17px;animation-delay:-.55s;background:var(--violet)}
+  .mark i:nth-child(3){height:11px;animation-delay:-.9s}
+  .mark i:nth-child(4){height:19px;animation-delay:-.35s;background:var(--violet)}
+  @keyframes eq{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}
+  .brand small{font-family:var(--font-serif);font-weight:700;font-size:.82rem;letter-spacing:.1em;color:var(--violet-deep);margin-left:3px}
+  .nav-links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--slate)}
+  .nav-links a{transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body);font-weight:700;font-size:.95rem;letter-spacing:.02em;padding:13px 24px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s,color .2s,border-color .2s;white-space:nowrap}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--gold);color:#1d1405;box-shadow:0 6px 20px rgba(227,165,60,.42)}
+  .btn-primary:hover{background:var(--gold-deep);box-shadow:0 10px 26px rgba(227,165,60,.5)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);background:rgba(22,16,32,.04)}
+  .s-dark .btn-ghost{border-color:var(--line-dark);color:#EBE7F2}
+  .s-dark .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .btn .arr{font-family:var(--font-display);font-weight:800}
+  .nav .btn{padding:10px 20px;font-size:.88rem}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:clamp(76px,12vw,150px) 0 clamp(96px,12vw,150px)}
+  .hero::before{content:"";position:absolute;top:-28%;right:-10%;width:62vw;height:62vw;max-width:740px;max-height:740px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(227,165,60,.32),rgba(227,165,60,.07) 42%,transparent 66%);pointer-events:none}
+  .hero::after{content:"";position:absolute;bottom:-30%;left:-12%;width:56vw;height:56vw;max-width:640px;max-height:640px;border-radius:50%;background:radial-gradient(circle,rgba(123,97,224,.32),transparent 64%);pointer-events:none}
+  .hero-wave{position:absolute;left:0;right:0;bottom:0;height:170px;overflow:hidden;z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .hero-wave svg{position:absolute;bottom:0;left:0;width:200%;height:100%;animation:drift 26s linear infinite}
+  @keyframes drift{to{transform:translateX(-50%)}}
+  .hero-inner{position:relative;z-index:2;max-width:850px}
+  .hero h1{font-size:clamp(2.5rem,6.2vw,4.7rem);line-height:1.14;letter-spacing:-.02em}
+  .hero h1 .em{color:var(--gold)}
+  .hero-sub{font-size:clamp(1.04rem,1.7vw,1.28rem);color:#C9C2DA;max-width:55ch;margin:26px 0 0;line-height:1.95}
+  .hero-free{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-family:var(--font-serif);font-weight:700;font-size:1.05rem;color:#fff}
+  .hero-free b{color:var(--gold)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .hero-trust{margin-top:42px;padding-top:26px;border-top:1px solid var(--line-dark);font-size:.92rem;color:#9D95AE;max-width:50ch}
+  .hero-trust b{color:#EBE7F2;font-weight:700}
+  .hero-trust .src{display:block;margin-top:10px;font-family:var(--font-serif);color:var(--violet-2);font-size:.9rem}
+
+  /* ---------- pains ---------- */
+  .pain-head{max-width:680px;margin-bottom:clamp(36px,5vw,56px)}
+  .pain-head h2 .serif{font-family:var(--font-serif);font-weight:700}
+  .pains{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .pain{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;gap:18px;align-items:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .pain:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(227,165,60,.4)}
+  .pain .q{font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--gold);line-height:1;flex:none;margin-top:3px}
+  .pain p{margin:0;font-weight:500;color:var(--ink);font-size:1.02rem;line-height:1.85}
+  .pain span{display:block;font-size:.82rem;color:var(--slate-2);margin-top:8px;letter-spacing:.04em}
+
+  /* ---------- journey ---------- */
+  .journey-head{max-width:700px;margin-bottom:clamp(44px,6vw,68px)}
+  .journey-wrap{position:relative}
+  .rail{position:absolute;left:29px;top:14px;bottom:36px;width:2px;background:linear-gradient(180deg,var(--gold) 0%,var(--gold) 30%,var(--violet) 62%,var(--violet) 100%);border-radius:2px}
+  .stations{list-style:none;margin:0;padding:0;position:relative;z-index:2}
+  .station{position:relative;padding:0 0 clamp(34px,4vw,52px) 84px;opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+  .station.in{opacity:1;transform:none}
+  .station:last-child{padding-bottom:0}
+  .station .dot{position:absolute;left:20px;top:6px;width:20px;height:20px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(227,165,60,.15);border:3px solid var(--surface)}
+  .station[data-tone="violet"] .dot{background:var(--violet);box-shadow:0 0 0 6px rgba(123,97,224,.16)}
+  .station.dest .dot{width:28px;height:28px;left:16px;background:var(--violet);box-shadow:0 0 0 7px rgba(123,97,224,.18),0 0 0 15px rgba(123,97,224,.08)}
+  .station-no{font-family:var(--font-display);font-weight:800;font-size:clamp(.8rem,1.2vw,.92rem);letter-spacing:.22em;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .station[data-tone="violet"] .station-no,.station.dest .station-no{color:var(--violet-deep)}
+  .station-no .en{color:var(--slate-2);font-weight:600;letter-spacing:.18em}
+  .station h3{font-size:clamp(1.25rem,2.1vw,1.62rem);margin:0 0 8px}
+  .station p{margin:0;color:var(--slate);max-width:54ch;font-size:1.01rem;line-height:1.85}
+
+  /* ---------- services ---------- */
+  .svc-head{max-width:680px;margin-bottom:clamp(40px,5vw,60px)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .svc{position:relative;background:var(--ink-2);border:1px solid var(--line-dark);border-radius:20px;padding:34px 32px;overflow:hidden;transition:transform .2s,box-shadow .25s}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .svc .tag{font-family:var(--font-display);font-weight:700;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .svc.violet .tag{color:var(--violet-2)}
+  .svc h3{color:#fff;font-size:1.35rem;margin:12px 0 12px}
+  .svc p{margin:0;color:#B4ACC6;font-size:.99rem;line-height:1.85}
+  .svc .edge{position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)}
+  .svc.violet .edge{background:var(--violet)}
+  .svc.feature{grid-column:1 / -1;background:linear-gradient(115deg,var(--ink-3),var(--ink-2))}
+  .svc.feature h3{font-size:1.55rem}
+
+  /* ---------- why ---------- */
+  .why-head{max-width:700px;margin-bottom:clamp(40px,5vw,60px)}
+  .why-head h2 .serif{font-family:var(--font-serif);font-weight:700}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:transform .2s,box-shadow .2s}
+  .why:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .why .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(227,165,60,.14);margin-bottom:20px}
+  .why .ico svg{width:24px;height:24px;stroke:var(--gold-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .why:nth-child(3) .ico{background:rgba(123,97,224,.14)}
+  .why:nth-child(3) .ico svg{stroke:var(--violet-deep)}
+  .why h3{font-size:1.22rem;margin:0 0 12px}
+  .why p{margin:0;color:var(--slate);font-size:.99rem;line-height:1.85}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .stat .num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1;color:var(--gold);letter-spacing:-.01em}
+  .stat:nth-child(n+3) .num{color:var(--violet-2)}
+  .stat .lbl{margin-top:12px;font-size:.92rem;color:#B4ACC6;letter-spacing:.04em}
+  .stats-note{text-align:center;margin-top:40px;font-size:.8rem;color:#857C96}
+
+  /* ---------- flow ---------- */
+  .flow-head{max-width:680px;margin-bottom:clamp(40px,5vw,58px)}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+  .step{position:relative;padding-top:8px}
+  .step .n{counter-increment:step;font-family:var(--font-display);font-weight:800;font-size:.8rem;letter-spacing:.2em;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .step .n::before{content:counter(step,decimal-leading-zero)}
+  .step .n::after{content:"";flex:1;height:1px;background:var(--line)}
+  .step h3{font-size:1.1rem;margin:0 0 8px;line-height:1.5}
+  .step p{margin:0;color:var(--slate);font-size:.95rem;line-height:1.8}
+
+  /* ---------- voices ---------- */
+  .voices-head{margin-bottom:clamp(36px,5vw,52px)}
+  .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .voice{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:32px 30px;display:flex;flex-direction:column}
+  .voice .quo{font-family:var(--font-serif);font-weight:700;font-size:2.4rem;color:var(--gold);line-height:.7;height:24px}
+  .voice p{margin:14px 0 0;font-size:1rem;color:var(--ink);line-height:1.9;flex:1}
+  .voice .who{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--slate)}
+  .voice .who b{display:block;color:var(--ink);font-weight:700;font-size:.95rem}
+
+  /* ---------- pricing ---------- */
+  .price-head{max-width:680px;margin-bottom:clamp(40px,5vw,58px)}
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .price{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column}
+  .price.hot{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--shadow-md);position:relative}
+  .price.hot::before{content:"いちばん多い";position:absolute;top:-13px;left:30px;background:var(--gold);color:#1d1405;font-size:.74rem;font-weight:700;letter-spacing:.06em;padding:5px 14px;border-radius:999px}
+  .price .pt{font-family:var(--font-display);font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--slate-2)}
+  .price h3{font-size:1.32rem;margin:10px 0 6px}
+  .price .amt{font-family:var(--font-display);font-weight:800;font-size:2.1rem;color:var(--ink);line-height:1.2;margin-bottom:4px}
+  .price .amt small{font-size:.92rem;font-weight:500;color:var(--slate)}
+  .price .desc{color:var(--slate);font-size:.95rem;line-height:1.8;margin:6px 0 22px;flex:1}
+  .price ul{list-style:none;margin:0 0 24px;padding:0}
+  .price li{position:relative;padding-left:26px;font-size:.94rem;color:var(--ink);margin-bottom:10px;line-height:1.65}
+  .price li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:8px;border-left:2px solid var(--violet-deep);border-bottom:2px solid var(--violet-deep);transform:rotate(-45deg)}
+  .price .btn{width:100%}
+  .price-note{text-align:center;margin-top:34px;font-size:.82rem;color:var(--slate-2)}
+
+  /* ---------- faq ---------- */
+  .faq-head{max-width:680px;margin-bottom:clamp(36px,5vw,52px)}
+  .faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--font-body);font-weight:700;font-size:1.06rem;color:var(--ink);padding:24px 48px 24px 0;position:relative;line-height:1.6;letter-spacing:.01em}
+  .faq-q:hover{color:var(--gold-deep)}
+  .faq-q .pm{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:22px;height:22px}
+  .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--gold);border-radius:2px;transition:transform .3s}
+  .faq-q .pm::before{left:0;right:0;top:10px;height:2px}
+  .faq-q .pm::after{top:0;bottom:0;left:10px;width:2px}
+  .faq-q[aria-expanded="true"] .pm::after{transform:scaleY(0)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{margin:0;padding:0 48px 26px 0;color:var(--slate);font-size:1rem;line-height:1.9}
+
+  /* ---------- final cta ---------- */
+  .final{position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:90vw;height:90vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(circle,rgba(227,165,60,.2),transparent 60%);pointer-events:none}
+  .final-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start}
+  .final h2{font-size:clamp(2rem,3.8vw,3.05rem);color:#fff;line-height:1.22}
+  .final h2 .em{color:var(--gold)}
+  .final-sub{margin:22px 0 0;color:#BDB6CC;font-size:1.06rem;line-height:1.95;max-width:46ch}
+  .final-points{margin:30px 0 0;padding:0;list-style:none}
+  .final-points li{position:relative;padding-left:30px;color:#D6CFE4;font-size:.98rem;margin-bottom:14px}
+  .final-points li::before{content:"";position:absolute;left:0;top:8px;width:15px;height:9px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+  .final-alt{margin-top:30px;font-size:.92rem;color:#988FAA}
+  .final-alt a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(227,165,60,.4)}
+
+  .form{background:var(--surface);border-radius:22px;padding:clamp(28px,3vw,40px);box-shadow:0 30px 70px rgba(0,0,0,.4)}
+  .form-row{margin-bottom:18px}
+  .form label{display:block;font-size:.86rem;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:.02em}
+  .form label .req{color:var(--gold-deep);font-size:.78rem;margin-left:6px}
+  .form input,.form select,.form textarea{width:100%;font-family:var(--font-body);font-size:1rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;transition:border-color .2s,box-shadow .2s;line-height:1.6}
+  .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(227,165,60,.16)}
+  .form textarea{resize:vertical;min-height:96px}
+  .form .err{color:#c0392b;font-size:.82rem;margin-top:6px;display:none}
+  .form-row.invalid input,.form-row.invalid select{border-color:#c0392b}
+  .form-row.invalid .err{display:block}
+  .form .btn{width:100%;margin-top:6px;padding:16px}
+  .form .fine{font-size:.78rem;color:var(--slate-2);text-align:center;margin:16px 0 0;line-height:1.7}
+  .form-success{display:none;text-align:center;padding:30px 10px}
+  .form-success.show{display:block}
+  .form-success .chk{width:64px;height:64px;border-radius:50%;background:rgba(227,165,60,.16);display:grid;place-items:center;margin:0 auto 20px}
+  .form-success .chk svg{width:30px;height:30px;stroke:var(--gold-deep);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .form-success h3{font-size:1.4rem;margin:0 0 12px}
+  .form-success p{color:var(--slate);margin:0;line-height:1.85}
+
+  /* ---------- footer ---------- */
+  .footer{background:#100B18;color:#8F86A1;padding:64px 0 40px}
+  .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-brand .brand{color:#fff;margin-bottom:14px}
+  .foot-brand p{margin:0;max-width:36ch;font-size:.92rem;line-height:1.8}
+  .foot-cols{display:flex;gap:64px;flex-wrap:wrap}
+  .foot-col h4{font-family:var(--font-display);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#675C7C;margin:0 0 16px;font-weight:700}
+  .foot-col a{display:block;font-size:.93rem;margin-bottom:11px;transition:color .2s}
+  .foot-col a:hover{color:#fff}
+  .foot-bottom{padding-top:28px;font-size:.82rem;color:#675C7C;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:920px){
+    .nav-links{display:none}
+    .why-grid,.flow,.voices,.prices{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:1fr 1fr;gap:36px 24px}
+    .final-grid{grid-template-columns:1fr;gap:40px}
+  }
+  @media(max-width:620px){
+    .pains,.svc-grid,.why-grid,.flow,.voices,.prices{grid-template-columns:1fr}
+    .svc.feature{grid-column:auto}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+    .nav .btn{padding:9px 16px;font-size:.82rem}
+    .station{padding-left:64px}
+    .rail{left:23px}
+    .station .dot{left:14px}
+    .station.dest .dot{left:11px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .station{opacity:1;transform:none;transition:none}
+    .hero-wave svg{animation:none}
+    .mark i{animation:none;transform:scaleY(1)}
+    *{transition-duration:.01ms !important}
+  }
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>BANSO<small>伴奏</small></a>
+    <nav class="nav-links">
+      <a href="#journey">伴奏マップ</a>
+      <a href="#services">サービス</a>
+      <a href="#why">選ばれる理由</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">LINEで無料診断</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">業種を問わず、起業に伴奏を。</p>
+    <h1>アイデアを、<br><span class="em">続く事業</span>に。</h1>
+    <p class="hero-sub">主役は、あなた。私たちは構想からサイト制作、集客・送客、そしてEXITまで、あなたのテンポに合わせて、ずっと隣で伴奏します。</p>
+    <p class="hero-free">最初のご相談は、<b>無料</b>です。</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">LINEで無料診断を受ける <span class="arr">→</span></a>
+      <a href="#journey" class="btn btn-ghost">伴奏の流れを見る</a>
+    </div>
+    <p class="hero-trust">これまで <b>120社以上</b> の起業・事業づくりに伴奏。売り込みはしません。「今、何にお金と時間をかけるべきか」だけ、一緒に決めます。<span class="src">♪ 音楽の商社が運営する、起業の伴奏サービスです。</span></p>
+  </div>
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 2880 170" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#E3A53C"/>
+          <stop offset="1" stop-color="#7B61E0"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#wg)" opacity=".13" d="M0,128 C80,100 160,100 240,128 C320,156 400,156 480,128 C560,100 640,100 720,128 C800,156 880,156 960,128 C1040,100 1120,100 1200,128 C1280,156 1360,156 1440,128 C1520,100 1600,100 1680,128 C1760,156 1840,156 1920,128 C2000,100 2080,100 2160,128 C2240,156 2320,156 2400,128 C2480,100 2560,100 2640,128 C2720,156 2800,156 2880,128 L2880,170 L0,170 Z"/>
+      <path fill="url(#wg)" opacity=".22" d="M0,108 C80,126 160,126 240,108 C320,90 400,90 480,108 C560,126 640,126 720,108 C800,90 880,90 960,108 C1040,126 1120,126 1200,108 C1280,90 1360,90 1440,108 C1520,126 1600,126 1680,108 C1760,90 1840,90 1920,108 C2000,126 2080,126 2160,108 C2240,90 2320,90 2400,108 C2480,126 2560,126 2640,108 C2720,90 2800,90 2880,108 L2880,170 L0,170 Z"/>
+      <path fill="none" stroke="url(#wg)" stroke-width="2" opacity=".5" d="M0,108 C80,126 160,126 240,108 C320,90 400,90 480,108 C560,126 640,126 720,108 C800,90 880,90 960,108 C1040,126 1120,126 1200,108 C1280,90 1360,90 1440,108 C1520,126 1600,126 1680,108 C1760,90 1840,90 1920,108 C2000,126 2080,126 2160,108 C2240,90 2320,90 2400,108 C2480,126 2560,126 2640,108 C2720,90 2800,90 2880,108"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== PAINS ===== -->
+<section class="section s-paper">
+  <div class="wrap">
+    <div class="pain-head">
+      <p class="eyebrow">よくあるつまずき</p>
+      <h2>起業は、<span class="serif">一人で抱えるほど</span>遠回りになる。</h2>
+    </div>
+    <div class="pains">
+      <div class="pain"><span class="q">Q</span><div><p>何から手をつければいいか分からず、構想のまま時間だけが過ぎている。</p><span>構想・準備の段階</span></div></div>
+      <div class="pain"><span class="q">Q</span><div><p>サイトや集客にお金と時間を取られ、肝心の本業が前に進まない。</p><span>立ち上げの段階</span></div></div>
+      <div class="pain"><span class="q">Q</span><div><p>相談できる相手がいない。経営判断がいつも独りで、確信が持てない。</p><span>すべての段階</span></div></div>
+      <div class="pain"><span class="q">Q</span><div><p>軌道に乗ってきたが、次の一手——拡大や売却——の描き方が分からない。</p><span>成長・出口の段階</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section class="section s-surface" id="journey">
+  <div class="wrap">
+    <div class="journey-head">
+      <p class="eyebrow">伴奏マップ</p>
+      <h2>最初の一音から、フィナーレまで。</h2>
+      <p class="lead">起業には段階があります。BANSOは、どの段階からでも、あなたのテンポに合わせて隣で伴奏します。引き継ぎのロスも、相談相手探しもいりません。</p>
+    </div>
+    <div class="journey-wrap">
+      <div class="rail" aria-hidden="true"></div>
+      <ol class="stations">
+        <li class="station" data-tone="gold">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="station-no">01 <span class="en">/ PRELUDE</span></div>
+          <h3>構想・準備</h3>
+          <p>無料相談で現在地を整理し、事業の核を一緒に言語化。あなた専用のロードマップを描きます。</p>
+        </li>
+        <li class="station" data-tone="gold">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="station-no">02 <span class="en">/ FIRST NOTE</span></div>
+          <h3>立ち上げ</h3>
+          <p>サイト・LP・ブランド・仕組みまで。立ち上げに必要な「最初の一音」を最短で形にします。</p>
+        </li>
+        <li class="station" data-tone="violet">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="station-no">03 <span class="en">/ RHYTHM</span></div>
+          <h3>集客</h3>
+          <p>広告・SNS・コンテンツ・SEOで、最初の顧客を獲得する。数字を見ながら一緒に回します。</p>
+        </li>
+        <li class="station" data-tone="violet">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="station-no">04 <span class="en">/ HARMONY</span></div>
+          <h3>送客</h3>
+          <p>独自のパートナー網であなたに顧客を流し、あなたの顧客も次へつなぐ。「客がつく」状態をつくります。</p>
+        </li>
+        <li class="station dest" data-tone="violet">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="station-no">05 <span class="en">/ FINALE</span></div>
+          <h3>事業承継・M&A</h3>
+          <p>育った事業の売却・承継まで。売りたい人と買いたい人をつなぎ、出口まで設計します。</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section s-dark" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <p class="eyebrow">サービス</p>
+      <h2>立ち上げに必要なものを、ひとつの窓口で。</h2>
+      <p class="lead">必要な支援だけを、必要なぶんだけ。使わないものに費用は発生しません。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feature">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="tag">Tuning ／ 音合わせ</span>
+        <h3>無料相談 ＆ ロードマップ</h3>
+        <p>演奏前の音合わせのように、まず現在地と方向性を整えます。何にお金と時間をかけ、何を後回しにするか——優先順位を一緒に設計します。すべてはここから。</p>
+      </div>
+      <div class="svc">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="tag">Arrangement</span>
+        <h3>サイト・ブランド制作</h3>
+        <p>LP・コーポレートサイト・ロゴ・名刺まで。立ち上げの「顔」を、見やすく信頼される形に整えます。</p>
+      </div>
+      <div class="svc violet">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="tag">Performance</span>
+        <h3>集客・送客支援</h3>
+        <p>広告運用・SNS・SEOに加え、独自のパートナー網で「実際に顧客がつく」状態へ。机上の集客で終わらせません。</p>
+      </div>
+      <div class="svc violet">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="tag">Encore</span>
+        <h3>事業承継・M&A</h3>
+        <p>売りたい人と買いたい人をつなぎ、評価から交渉、引き継ぎまで。出口まで同じチームで伴奏します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="section s-paper" id="why">
+  <div class="wrap">
+    <div class="why-head">
+      <p class="eyebrow">選ばれる理由</p>
+      <h2>主役を、<span class="serif">引き立てる</span>。</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M7.5 21h9l-2-17h-5l-2 17z"/><path d="M9.5 13.5h5"/><path d="M12 18.5 14 7"/><circle cx="14" cy="8.6" r="1.1"/></svg></div>
+        <h3>主役は、いつもあなた</h3>
+        <p>伴奏者は、出しゃばりません。あなたのテンポに合わせ、必要な支援だけをそっと添える。主役を奪わないのが、私たちの流儀です。</p>
+      </div>
+      <div class="why">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-7 3 14 2-9 2 5h4"/></svg></div>
+        <h3>構想から出口まで、一気通貫</h3>
+        <p>制作も集客も売却も、窓口はひとつ。会社をまたぐ引き継ぎのロスがなく、あなたの事業を一番よく知るチームが最後まで担当します。</p>
+      </div>
+      <div class="why">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 4.5 1.5c0 1.5-2 2-2 3"/><path d="M12 16.4v.2"/></svg></div>
+        <h3>なぜ相談が無料なのか</h3>
+        <p>私たちはパートナーへの送客などからも収益を得ています。だから入口のご相談で費用はいただきません。その仕組みも、正直にお伝えします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section s-dark">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="num">120<small style="font-size:.5em">社+</small></div><div class="lbl">伴奏した起業・事業</div></div>
+      <div class="stat"><div class="num">92<small style="font-size:.5em">%</small></div><div class="lbl">支援継続率</div></div>
+      <div class="stat"><div class="num">3<small style="font-size:.5em">週間</small></div><div class="lbl">初回サイト公開までの平均</div></div>
+      <div class="stat"><div class="num">30<small style="font-size:.5em">社+</small></div><div class="lbl">連携する送客パートナー</div></div>
+    </div>
+    <p class="stats-note">※ 数値は記載例です。実績の確定値に差し替えてください。</p>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="section s-surface" id="flow">
+  <div class="wrap">
+    <div class="flow-head">
+      <p class="eyebrow violet">ご利用の流れ</p>
+      <h2>ご相談から、最短その週に動き出す。</h2>
+    </div>
+    <div class="flow">
+      <div class="step"><div class="n"></div><h3>無料相談を予約</h3><p>SNSまたはこのページのフォームから。30分・オンライン対応。</p></div>
+      <div class="step"><div class="n"></div><h3>現状をヒアリング</h3><p>段階と課題をうかがい、その場でロードマップと優先順位を提示します。</p></div>
+      <div class="step"><div class="n"></div><h3>必要な支援を選ぶ</h3><p>制作・集客・送客から必要なものだけを。不要なものは勧めません。</p></div>
+      <div class="step"><div class="n"></div><h3>出口まで伴奏</h3><p>立ち上げ後も、集客・送客・M&Aまで継続的に隣で走ります。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICES ===== -->
+<section class="section s-paper">
+  <div class="wrap">
+    <div class="voices-head">
+      <p class="eyebrow">お客様の声</p>
+      <h2>伴奏した人たちの、言葉。</h2>
+    </div>
+    <div class="voices">
+      <div class="voice"><div class="quo">“</div><p>「相談だけのつもりが、ロードマップで頭が一気に整理されました。サイト公開後すぐに最初の顧客を紹介してもらえたのが大きかった。」</p><div class="who"><b>A.S 様</b>オンライン教育サービス／創業1年目</div></div>
+      <div class="voice"><div class="quo">“</div><p>「アイデアしかない状態から伴奏してもらいました。"今は何にお金をかけないか"を一緒に決められたのが、資金の少ない自分には本当に助かった。」</p><div class="who"><b>K.T 様</b>フード系スタートアップ／構想から参画</div></div>
+      <div class="voice"><div class="quo">“</div><p>「事業の売却を考えたとき、立ち上げから知るチームがそのまま出口まで動いてくれた。引き継ぎの不安がほぼなかったです。」</p><div class="who"><b>M.N 様</b>EC事業／M&Aで譲渡</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section s-surface" id="pricing">
+  <div class="wrap">
+    <div class="price-head">
+      <p class="eyebrow violet">料金の考え方</p>
+      <h2>必要なものに、必要なだけ。</h2>
+      <p class="lead">相談は無料。制作や集客支援は内容に応じてお見積りし、料金は着手前に必ず明示します。後出しの費用はありません。</p>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <span class="pt">Step 1</span>
+        <h3>無料相談</h3>
+        <div class="amt">¥0</div>
+        <p class="desc">どの段階の方でも。まずは現在地と次の一歩を持ち帰ってください。</p>
+        <ul>
+          <li>起業準備度の診断</li>
+          <li>専用ロードマップの提示</li>
+          <li>優先順位の設計</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">予約する</a>
+      </div>
+      <div class="price hot">
+        <span class="pt">Step 2</span>
+        <h3>スポット支援</h3>
+        <div class="amt">お見積り<small> ／ 単発</small></div>
+        <p class="desc">立ち上げに必要なものを、必要なぶんだけ単発で。</p>
+        <ul>
+          <li>サイト・LP・ブランド制作</li>
+          <li>事業計画ブラッシュアップ</li>
+          <li>広告・集客の初期設計</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">相談して見積る</a>
+      </div>
+      <div class="price">
+        <span class="pt">Step 3</span>
+        <h3>伴奏パートナー</h3>
+        <div class="amt">月額制<small> ／ 応相談</small></div>
+        <p class="desc">立ち上げ後の集客・送客・経営を、継続的に隣で。</p>
+        <ul>
+          <li>集客・送客の継続運用</li>
+          <li>経営の壁打ち・意思決定の伴奏</li>
+          <li>出口（M&A）まで見据えた設計</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">相談する</a>
+      </div>
+    </div>
+    <p class="price-note">※ 料金構成は一例です。実際のプラン・金額に差し替えてご利用ください。</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section s-paper" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <p class="eyebrow">よくある質問</p>
+      <h2>はじめる前の、不安に答えます。</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">お金がほとんどありません。それでも相談できますか？<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>はい。むしろ資金が限られる段階こそ、優先順位の設計が効きます。無料相談で「今は何にお金をかけ、何を後回しにするか」を一緒に決めます。低単価から始められる入口もご用意しています。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">まだアイデアが固まっていません。<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>大丈夫です。構想の言語化からが私たちの仕事です。漠然とした「やってみたい」を、検証できる形に落とすところから一緒に始めます。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">起業塾や情報商材とは何が違いますか？<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>高額なパッケージを売る「塾」とは違い、あなたのテンポに合わせて必要な支援だけを伴奏します。料金は着手前に明示し、不要なものは勧めません。制作・集客・送客・M&Aまで、実際に手を動かすのが私たちの仕事です。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">強引な営業をされませんか？<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>しません。無料相談で「合わない」と感じたら、それで終わって構いません。ロードマップだけ持ち帰っていただいても大丈夫です。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">どの段階からでも相談できますか？<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>はい。構想中でも、立ち上げ済みでも、売却を考えていても対応します。今の段階に合わせて、必要な支援だけをご提案します。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">対応エリアは？<span class="pm" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>オンライン中心に全国対応しています。ご希望に応じて対面でのご相談も可能です。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="section s-dark final" id="contact">
+  <div class="wrap final-grid">
+    <div>
+      <p class="eyebrow">まずは、音合わせから。</p>
+      <h2>あなたの「やってみたい」を、<br><span class="em">形にする</span>最初の一歩。</h2>
+      <p class="final-sub">まずはLINEで、起業準備度の無料診断から。結果に合わせて個別にアドバイスし、必要なら無料相談（30分）へ。売り込みはしません。</p>
+      <ul class="final-points">
+        <li>起業準備度を診断し、ロードマップを提示</li>
+        <li>「今、何にお金をかけるか」を一緒に整理</li>
+        <li>合わなければ、相談だけで終了でOK</li>
+      </ul>
+      <p class="final-alt">SNSのDMからでもご相談いただけます。<a href="#">X（旧Twitter）</a>・<a href="#">Instagram</a></p>
+    </div>
+
+    <div style="background:var(--surface);border:1.5px solid #06C755;border-radius:22px;padding:clamp(26px,3vw,36px);box-shadow:0 20px 50px rgba(6,199,85,.18);margin-bottom:22px">
+      <div style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#06934A;margin-bottom:14px"><span style="width:7px;height:7px;border-radius:50%;background:#06C755"></span>LINEで、いちばん早く</div>
+      <h3 style="font-family:var(--font-display);font-weight:800;font-size:1.5rem;color:var(--ink);margin:0 0 10px;line-height:1.4">友だち追加で、<br>無料診断＆個別相談</h3>
+      <p style="color:var(--slate);font-size:.98rem;line-height:1.85;margin:0 0 22px">起業準備度の<b>無料診断</b>（1分・選択式）→ あなたの段階に合わせた<b>個別アドバイス</b>→ そのまま<b>無料相談</b>へ。すべてLINEで完結します。</p>
+      <a href="https://lin.ee/rbsEZ4X" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#06C755;color:#fff;font-family:var(--font-body);font-weight:700;font-size:1.05rem;text-decoration:none;padding:16px 24px;border-radius:14px;box-shadow:0 8px 22px rgba(6,199,85,.4)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.4 4.7 3.6 6.1-.1.9-.5 2.1-1.1 3.1-.2.4.1.7.5.5 1.7-.5 3-1.2 3.8-1.7.9.2 1.8.3 2.8.3 5.5 0 10-3.6 10-8s-4.5-8-10-8Z"/></svg>
+        友だち追加して診断をはじめる
+      </a>
+      <p style="text-align:center;color:var(--slate-2);font-size:.78rem;margin:12px 0 0">登録は無料・1分。しつこい配信はしません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>BANSO<small>伴奏</small></a>
+        <p>音楽の商社が運営する、起業の伴奏サービス。構想・立ち上げ・集客・送客・M&Aまで、主役のあなたに、同じチームで。</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Service</h4>
+          <a href="#services">無料相談</a>
+          <a href="#services">サイト・ブランド制作</a>
+          <a href="#services">集客・送客支援</a>
+          <a href="#services">事業承継・M&A</a>
+        </div>
+        <div class="foot-col">
+          <h4>About</h4>
+          <a href="#journey">伴奏マップ</a>
+          <a href="#why">選ばれる理由</a>
+          <a href="#pricing">料金の考え方</a>
+          <a href="#faq">よくある質問</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="#contact">無料相談を予約</a>
+          <a href="#">X（旧Twitter）</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 BANSO. All rights reserved.</span>
+      <span>運営：〇〇株式会社（音楽商社・要差し替え）</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var nav = document.querySelector('.nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 20); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var stations = document.querySelectorAll('.station');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var i = Array.prototype.indexOf.call(stations, e.target);
+          e.target.style.transitionDelay = (i * 110) + 'ms';
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.2});
+    stations.forEach(function(s){ io.observe(s); });
+  } else {
+    stations.forEach(function(s){ s.classList.add('in'); });
+  }
+
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      var panel = btn.nextElementSibling;
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.style.maxHeight = open ? null : (panel.scrollHeight + 'px');
+    });
+  });
+</script>
+</body>
+</html>
